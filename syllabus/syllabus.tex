@@ -1,0 +1,267 @@
+\documentclass[9pt]{article}
+
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{multicol}
+% \usepackage[normalem]{ulem}
+
+\addtolength{\topmargin}{-.25in}
+\addtolength{\textheight}{0.5in}
+% \setlength{\parindent}{0pt}
+\setlength{\multicolsep}{2pt}
+
+\title{Syllabus: ASEN 3728 Aircraft Dynamics}
+\author{Professor Zachary Sunberg}
+\date{Spring 2024}
+
+\begin{document}
+
+\maketitle
+
+\section*{Meetings}
+
+T/TH 8:30-9:45, AERO 120 -- Lecture video will automatically be posted online - see Piazza for link.
+
+\section*{Course Staff}
+
+\subsection*{Instructor}
+Professor Zachary Sunberg\\
+AERO 263 \href{mailto://zachary.sunberg@colorado.edu}{\nolinkurl{zachary.sunberg@colorado.edu}} (please make a public or private Piazza post before emailing)\\
+\textbf{Office Hours}: Posted on Piazza
+
+\subsection*{Teaching Assistants}
+
+\textbf{Office Hours}: Posted on Piazza
+
+\begin{itemize}[noitemsep]
+\item Scott Mckinley 
+  \href{mailto:scott.mckinley@colorado.edu}{\nolinkurl{scott.mckinley@colorado.edu}}
+\item Ben Kraske
+  \href{mailto:benjamin.kraske@colorado.edu}{\nolinkurl{benjamin.kraske@colorado.edu}}
+\item Yusif Razzaq
+  \href{mailto:Yusif.Razzaq@colorado.edu}{\nolinkurl{Yusif.Razzaq@colorado.edu}}
+\item Vaibhavi Thakur
+  \href{mailto:Vaibhavi.Thakur@colorado.edu}{\nolinkurl{Vaibhavi.Thakur@colorado.edu}}
+\item Paraksh Vankawala
+  \href{mailto:paraksh.vankawala@colorado.edu}{\nolinkurl{paraksh.vankawala@colorado.edu}}
+\end{itemize}
+
+\section*{Textbook}
+
+\textbf{Bernard Etkin and Lloyd Reid, \textit{Dynamics of Flight: Stability and Control, 3rd Edition}}. 1996, John Wiley and Sons.
+
+\section*{Prerequisites}
+
+ASEN 2002, 2003, 2004, and APPM 2360 (min grade C-).
+
+\section*{Overview}
+
+This course covers the key ideas that enable: (i) an understanding of
+how aircraft work and tools for quantitative analysis, and (ii) design
+methods to achieve specified dynamical behavior. Because aircraft exist
+in many different forms, and new designs continue to be developed, the
+focus is on the common principles that underlie atmospheric flight, so
+that a solid basis can be formed for future work in any direction.
+Concrete treatment of these ideas, tools, and methods is provided
+through working problems consisting
+of analysis, simulation, and design, including development of
+simulation models for two very different vehicles: a quad-copter and a
+conventional airplane.
+
+In their full expression, aircraft dynamics possess astounding
+complexity. It is a tribute to the ideas developed by aviation's
+pioneers that a relatively simple understanding can often be obtained,
+leading to clear insights and design principles. While these concepts
+are not inherently difficult, they do lie outside most common
+experience, and they depend on new nomenclature and strange notation
+that can seem overwhelming at first. It is only through diligent and
+careful use of this new language that the underlying simplicity can be
+grasped and conveyed on exams; mastery of the language of aircraft
+dynamics is perhaps the most important predictor for success in the
+course.
+
+The course has been designed to develop a conceptual grasp of the key
+ideas below, and to demonstrate proficiency in using these concepts to
+solve problems, construct and validate simulations, and to explain
+behaviors and results obtained. In particular, engineering reasoning
+skills using these concepts are stressed in assignment solutions and
+examinations. The key learning objectives are:\\
+
+\begin{itemize}[nosep]
+\item Vector mechanics
+  \begin{itemize}[nosep]
+  \item Vector representation in coordinate frames
+  \item Change of coordinate frame representation (coordinate rotation)
+  \item Relative motion, frame derivatives
+  \item Change of derivative frame: velocity rule
+  \end{itemize}
+\item How aircraft dynamics models are created and what the terms mean
+  \begin{itemize}[nosep]
+  \item 3D rigid body translational model
+    \begin{itemize}[nosep]
+    \item Kinematics
+    \item Dynamics, external forces
+    \item Effects of wind
+    \end{itemize}
+  \item 3D rigid body rotational model
+      \begin{itemize}[nosep]
+    \item Kinematics, Euler angle attitude representation
+    \item Dynamics, Euler moment equations, external moments
+    \end{itemize}
+  \item External forces and moments
+      \begin{itemize}[nosep]
+    \item Aerodynamic effects
+    \item Control effects
+    \item Steady flight conditions, trim states
+    \end{itemize}
+  \end{itemize}
+\item How aircraft dynamics models are simulated
+    \begin{itemize}[nosep]
+    \item State space models
+    \item Numerical integration
+  \end{itemize}
+\item How dynamical behavior is understood and specified
+    \begin{itemize}[nosep]
+    \item Linearization
+    \item Decoupling
+    \item Stability derivatives
+    \item Modal solutions
+    \item Stability characterizations
+    \item Modal specifications
+  \end{itemize}
+\item How feedback control is designed to meet behavioral objectives
+    \begin{itemize}[nosep]
+    \item Sensor/feedback selection, control structure and gain selection
+    \item Effects on mode eigenvalues
+  \end{itemize}
+\end{itemize}
+
+\section*{Course Components}\label{course-components}
+
+Material and concepts are introduced, and student mastery is evaluated
+using several mechanisms throughout the course:
+
+\textbf{Reading} -- The textbook provides the essential basis for the
+course, including the concepts, terminology, notation, methods, and
+examples used to convey the course topics. Specific reading assignments
+will be given covering key sections of the book; some book sections are
+not covered in the course. Some supplementary material will also be
+provided. {The textbook contains a wealth of information, but the
+concepts and notation are new to most; some sections need to be read
+more than once to fully grasp the material}\emph{.}
+
+\textbf{Lectures} -- These are intended to emphasize key ideas and
+methods that make the material easier to grasp. They are therefore a
+counterpart to the reading, not a replacement. {The value of lectures is
+dependent on your participation in them}. Passive ``watching'' will
+provide little benefit. {Active note taking is critical to developing
+first-hand familiarity with the notation, terminology, and methods, and
+to gaining comfort in using them}. Although lectures will be recorded,
+this is a poor substitute for your own lecture notes. Questions are
+encouraged during lectures and will be prompted often.
+
+\textbf{Homework} -- In the instructor's opinion, homework is the most important tool for learning in this class because it provides essential individual practice in preparation for the exams and experience solving problems that will be faced in the student's career. Homework will consist of
+solving problems of varying difficulty and sometimes will also involve
+computing. Collaboration on homework is encouraged, but the work you submit must be your own. Students are encouraged to use homework as a means to ensure
+their individual mastery of the subject.
+
+\textbf{In-Class and Reading Quizzes} -- These will cover the reading material, and
+lectures.  They will usually consist of true-false and multiple-choice-style questions.
+
+\textbf{Exams} -- These are the primary means of evaluation of your
+individual grasp of the course material. Exams will include both conceptual questions and
+quantitative problems. Precise use of terminology and notation is
+stressed. The final exam is comprehensive in that it will contain
+material from the entire course, but emphasis will be placed on the
+final portion of the course material. \textbf{There will
+be a statute of limitations on when exam grades can be corrected. Any
+corrections on exam scores must be made before the next exam, or two
+weeks after the exam was returned, whichever comes later}. The only
+corrections made after this time period will be for simple addition
+errors in scoring.
+
+\section*{Websites}
+
+\begin{itemize}[nosep]
+    \item \href{https://piazza.com}{\textbf{Piazza}} will host course discussions, announcements, and host solutions that are not posted publicly. Students should ask questions here rather than emailing the course staff unless there is an important reason. The class signup link is at \url{https://piazza.com/colorado/spring2024/asen3728}.
+    \item \textbf{Gradescope} will be used for assignments.
+    \item \href{https://github.com/zsunberg/Aircraft-Dynamics-Materials}{\textbf{Github}} will be used to host all course materials. You can download all materials without using git, but learning the basics may be much more convenient, not to mention useful for your future career.
+    \item \textbf{Canvas} will be used minimally as a landing page and anything that cannot be accommodated by the above websites.
+\end{itemize}
+
+\section*{Attendance and Participation}
+
+Learning is a collaborative effort between the instructor and students. Students are expected to attend all lectures, ask questions, and participate in discussions. The course staff will encourage attendance through in-class quizzes. \textbf{If a student needs to miss class occasionally, please do NOT notify the course staff.} Several of the lowest in-class quiz scores will be dropped to accommodate absences (see grading breakdown below).
+
+\section*{Grading Philosophy}
+
+Grades are assigned according to an absolute standard designed to
+indicate your level of competence in the course material. The final
+grade indicates your readiness to continue to the next level in the
+curriculum. {The AES faculty have set these standards based on our
+education, experience, interactions with industry, government
+laboratories, others in academy, and according to the criteria
+established by the ABET accreditation board}.
+
+The course grade is primarily dependent on individual measures of
+competency, i.e., exams. The other course assignments are designed to
+enrich the learning experience and to enhance individual performance,
+not to substitute for sub-standard individual competency. This policy
+makes it important to use the assignments to enhance your learning.
+
+Grades for the course are earned set based on the following criteria:
+\begin{quote}
+A, A- Demonstrates mastery of the course material in both conceptual and
+quantitative aspects.
+
+B+, B Demonstrates comprehensive understanding of the material, with a
+solid conceptual grasp of key concepts and strong quantitative work.
+
+B-, C+ Demonstrates good understanding of most key concepts, with few
+major quantitative errors.
+
+C Demonstrates satisfying understanding of the material with sufficient
+quantitative work.
+
+C- Demonstrates adequate understanding of the material to proceed to the
+next level; sufficient quantitative work.
+
+D Very little understanding is evident, consistently poor quantitative
+work.
+
+F Unsatisfactory performance.
+\end{quote}
+
+Graders will assess whether responses provided by
+students reflect knowledge, understanding and reasoning processes that
+{meaningfully contribute} to answering questions posed on assignments.
+Vacuous responses, e.g., repeating questions,
+listing buzzwords, irrelevant diagram drawing, etc., will not suffice. This subject is difficult and
+non-intuitive, and since this is the first time most (if not all)
+students have seen this material, it is naturally assumed that all
+students must work hard and put in effort to learn the concepts.
+Therefore, hard work is necessary, but not sufficient by itself, to do
+well. Your effort must translate to demonstrable individual
+understanding for success.
+
+\subsection*{Grade Breakdown}
+
+\begin{itemize}[noitemsep]
+    \item \textbf{5\% In-class Quizzes.} (lowest 4 dropped)
+    \item \textbf{5\% Reading Quizzes.} (lowest 2 dropped)
+    \item \textbf{16\% Homework.} (lowest dropped)
+    \item \textbf{44\% Two Midterm Exams.} (22\% each)
+    \item \textbf{30\% Final Exam.}
+\end{itemize}
+
+\subsection*{Late Policy}
+
+To ensure proper progression through the course, students are expected to begin assignments early and submit homework assignments on time. However, in order to provide for minor unforeseen events or responsibilities, students may turn in late homework assignments within 72 hours of the due date with a 10\% penalty. No homework will be accepted after 72 hours beyond the due date. The lowest homework score will be dropped to account for missed assignments.
+
+\section*{Additional Policies}
+
+{\small
+    \input{required.tex}
+}
+\end{document}
