@@ -31,7 +31,7 @@ function fuzzTest(testCase)
         x = [randn(3,1); 2*pi*rand(3,1); randn(6,1)];
         u = randn(1);
         actual = monospinnerDynamics(0, x, u);
-        expected = monospinnerSolution(0, x, u);
+        expected = monospinnerDynamicsSolution(0, x, u);
         verifyEqual(testCase, actual, expected, 'AbsTol', 1e-6);
     end
 end
