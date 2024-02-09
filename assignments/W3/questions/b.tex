@@ -1,0 +1,52 @@
+\begin{question}
+    Consider the longitudinal dynamics of the linearized quadrotor EOM:
+    \begin{equation*}
+        \left(\begin{array}{c}
+        \Delta \dot{x}_E \\
+        \Delta \dot{u} \\
+        \Delta \dot{\theta} \\
+        \Delta \dot{q}
+        \end{array}\right)=\left(\begin{array}{c}
+        \Delta u \\
+        -g \Delta \theta \\
+        \Delta q \\
+        \frac{1}{I_u} \Delta M_c
+        \end{array}\right)
+    \end{equation*}
+    where $\Delta M_c$ is defined in terms of $k_1$ and $k_2$ as in question 1. 
+
+    \begin{enumerate}
+        \item Suppose a closed-loop modal analysis of the system was performed and you were given only the following values:
+    \begin{equation*}
+        \lambda_1 = -1.5+4.2i \hspace{10pt} \lambda_2 = -0.0023+0.037i
+    \end{equation*}
+    \begin{equation*}
+        \mathbf{v}_1 =  \left(\begin{array}{c}
+        0.005+0.0021i \\
+        0.075+0.0019i \\
+        0.0085+0.0065i \\
+        0.05 %Too challenging?
+        \end{array}\right) 
+        \hspace{10pt} \mathbf{v}_2 = \left(\begin{array}{c}
+        0.006+0.0089i \\
+        0.095+0.0030i \\
+        0.0075+0.0015i \\
+        0.0120+0.0030i %Too challenging?
+        \end{array}\right) 
+    \end{equation*}
+    True or False: It is possible to determine $\lambda_3$, $\lambda_4$, $\mathbf{v}_3$, and $\mathbf{v}_4$ if $k_1$ or $k_2$ are unknown. Explain your answer.
+    
+    \vspace{1ex}
+    \option TRUE \hspace{1cm} \option FALSE
+    \vspace{1ex}
+    
+    \item Consider the following eigenvalues for another quadrotor system with the same dynamics described above:
+    \begin{equation*}
+        \lambda_1 = -1.5 \hspace{10pt} \lambda_2 = -0.0023+0.037i
+    \end{equation*}
+    True or False: It is possible to determine $\lambda_3$, $\lambda_4$ if $k_1$ or $k_2$ are unknown. Explain your answer.
+        
+    \vspace{1ex}
+    \option TRUE \hspace{1cm} \option FALSE 
+    \end{enumerate}
+\end{question}

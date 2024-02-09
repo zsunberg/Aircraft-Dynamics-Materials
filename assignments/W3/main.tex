@@ -1,0 +1,44 @@
+\documentclass{article}
+
+\usepackage{fullpage,amsmath,amsthm,graphicx,enumitem}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{empheq}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+
+\newcommand{\option}{{\Large$\Square$ }}
+\def\IfSoln#1{\IfFileExists{solutions/#1}{\input{solutions/#1}}{}}
+
+\title{ASEN 3728 Aircraft Dynamics\\Written Homework 3}
+
+\date{Due date listed on Gradescope.}
+
+\begin{document}
+
+\maketitle
+
+\input{questions/s}
+\vspace{0.1cm}
+\IfSoln{s}
+\clearpage
+
+\input{questions/y}
+\vspace{0.1cm}
+\IfSoln{y}
+
+\vspace{6cm}
+
+\input{questions/a}
+\vspace{0.1cm}
+\IfSoln{a}
+
+\clearpage
+
+\input{questions/b}
+\vspace{0.1cm}
+\IfSoln{b}
+
+\end{document}
