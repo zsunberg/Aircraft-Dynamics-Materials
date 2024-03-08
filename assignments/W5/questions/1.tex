@@ -1,0 +1,115 @@
+
+
+\begin{question}
+    Consider the following longitudinal dynamics of an F-16 flying at some trim condition with airspeed $V_a = 502.0$ ft/s, where $\Delta{\bf x} = [{\Delta u}, {\Delta w}, {\Delta q}, {\Delta \theta}]^T$:
+    \begin{align*}
+    \Delta {\bf \dot{x}} = 
+    \left[ \begin{array}{c} 
+    \Delta \dot{u} \\
+    \Delta \dot{w} \\
+    \Delta \dot{q} \\
+    \Delta \dot{\theta}
+    \end{array} \right]
+    &=
+    \left[ \begin{array}{cccc}
+    	 -0.020 &   0.016  & -0.65  & -32.17 \\
+       -0.13  & -1.019   &       454.21 & 0\\
+                0 &  -0.0050     &     -1.38	 & 0   \\
+             0    &     0     &     1.0 & 0 \end{array} \right]
+    \left[ \begin{array}{c} 
+    \Delta u \\
+    \Delta w \\
+    \Delta q \\
+    \Delta \theta
+    \end{array} \right]
+    \end{align*}
+    \begin{enumerate}[label=(\alph*)]
+    \item Determine the natural frequency and damping ratio of the short period mode and the phugoid mode.
+    \item Determine the eigenvectors (mode shapes) for the short period and phugoid modes. Normalize each eigenvector so that the term corresponding to the pitch angle is 1.0.
+    \item Draw the phasor plots in terms of $\hat{u}$, $\hat{w}$, $q$, and $\Delta \theta$ for each mode. Label each component
+    % \item Create the augmented state space model that includes the flight path terms $\Delta x_E$ and $\Delta z_E$. Determine the eigenvalues and eigenvectors of this new matrix. What is the physical meaning of the two new modes?
+    \end{enumerate}
+
+    % \begin{figure}[!h]
+    %     \centering
+    %     \begin{tikzpicture}[scale=0.75]
+    %         \begin{axis}[
+    %             xmin=-500,xmax=500,
+    %             ymin=-500,ymax=500,
+    %             grid=both,
+    %             grid style={line width=.1pt, draw=gray!10},
+    %             major grid style={line width=.2pt,draw=gray!50},
+    %             axis lines=middle,
+    %             minor tick num=5,
+    %             enlargelimits={abs=0.5},
+    %             axis line style={latex-latex},
+    %             ticklabel style={font=\tiny,fill=white},
+    %             xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+    %             ylabel style={at={(ticklabel* cs:1)},anchor=south west}
+    %         ]
+    %         \node[fill=white,circle,inner sep=0pt] (O-label) at ($(O)+(-135:10pt)$) {$O$};
+    %         \end{axis}
+    %     \end{tikzpicture}
+    %     \caption{Mode 1}
+    %     \begin{tikzpicture}[scale=0.75]
+    %         \begin{axis}[
+    %             xmin=-500,xmax=500,
+    %             ymin=-500,ymax=500,
+    %             grid=both,
+    %             grid style={line width=.1pt, draw=gray!10},
+    %             major grid style={line width=.2pt,draw=gray!50},
+    %             axis lines=middle,
+    %             minor tick num=5,
+    %             enlargelimits={abs=0.5},
+    %             axis line style={latex-latex},
+    %             ticklabel style={font=\tiny,fill=white},
+    %             xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+    %             ylabel style={at={(ticklabel* cs:1)},anchor=south west}
+    %         ]
+    %         
+    %         \node[fill=white,circle,inner sep=0pt] (O-label) at ($(O)+(-135:10pt)$) {$O$};
+    %         \end{axis}
+    %     \end{tikzpicture}\caption{Mode 2}
+    %     \begin{tikzpicture}[scale=0.75]
+    %         \begin{axis}[
+    %             xmin=-2,xmax=2,
+    %             ymin=-2,ymax=2,
+    %             grid=both,
+    %             grid style={line width=.1pt, draw=gray!10},
+    %             major grid style={line width=.2pt,draw=gray!50},
+    %             axis lines=middle,
+    %             minor tick num=5,
+    %             enlargelimits={abs=0.5},
+    %             axis line style={latex-latex},
+    %             ticklabel style={font=\tiny,fill=white},
+    %             xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+    %             ylabel style={at={(ticklabel* cs:1)},anchor=south west}
+    %         ]
+    %         
+    %         % \coordinate (O) at (0,0);
+    %         \node[fill=white,circle,inner sep=0pt] (O-label) at ($(O)+(-135:10pt)$) {$O$};
+    %         \end{axis}
+    %     \end{tikzpicture}\caption{Mode 3}
+    %     \begin{tikzpicture}[scale=0.75]
+    %         \begin{axis}[
+    %             xmin=-2,xmax=2,
+    %             ymin=-2,ymax=2,
+    %             grid=both,
+    %             grid style={line width=.1pt, draw=gray!10},
+    %             major grid style={line width=.2pt,draw=gray!50},
+    %             axis lines=middle,
+    %             minor tick num=5,
+    %             enlargelimits={abs=0.5},
+    %             axis line style={latex-latex},
+    %             ticklabel style={font=\tiny,fill=white},
+    %             xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+    %             ylabel style={at={(ticklabel* cs:1)},anchor=south west}
+    %         ]
+    %         
+    %         % \coordinate (O) at (0,0);
+    %         \node[fill=white,circle,inner sep=0pt] (O-label) at ($(O)+(-135:10pt)$) {$O$};
+    %         \end{axis}
+    %     \end{tikzpicture}\caption{Mode 4}
+    % \end{figure}
+    
+\end{question}
