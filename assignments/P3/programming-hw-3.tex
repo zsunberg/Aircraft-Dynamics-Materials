@@ -36,7 +36,7 @@ All files are available by cloning the git repository at \url{https://github.com
 \begin{task}
     Implement the \texttt{lonAeroForcesAndMoments} function and run the tests as indicated in \texttt{TEMPLATE\_report.m} to verify that it is implemented correctly. See the documentation of the function for details about inputs and outputs. You may look at \texttt{latAeroForcesAndMoments.m} to see a similar implementation for lateral dynamics.
 
-    Assume that the lift and moment coefficients are linear functions of $\alpha$, $\hat{q}$, and $\delta_e$, and that $C_D = C_{D_\text{min}} + K (C_L + C_{L_\text{min}})^2$.Additionally, assume that all derivatives related to $\dot{\alpha}$ are zero. Use the thrust model already implemented in \texttt{TEMPLATE\_lonAeroForcesAndMoments.m} and assume that the thrust is aligned with the x axis of the aircraft. Note that the field \texttt{CL0} is the lift coefficient at zero angle of attack - not the lift coefficient at the minimum drag angle of attack or the lift coefficient at trim.
+    Assume that the lift and moment coefficients are linear functions of $\alpha$, $\hat{q}$, and $\delta_e$, and that $C_D = C_{D_\text{min}} + K (C_L - C_{L_\text{min}})^2$.Additionally, assume that all derivatives related to $\dot{\alpha}$ are zero. Use the thrust model already implemented in \texttt{TEMPLATE\_lonAeroForcesAndMoments.m} and assume that the thrust is aligned with the x axis of the aircraft. Note that the field \texttt{CL0} is the lift coefficient at zero angle of attack - not the lift coefficient at the minimum drag angle of attack or the lift coefficient at trim.
 \end{task}
 
 \begin{task}
