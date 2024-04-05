@@ -1,0 +1,51 @@
+\documentclass{article}
+
+\usepackage{fullpage,amsmath,amsthm,graphicx,enumitem}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{empheq}
+\usepackage{siunitx}
+
+%For Grid, thanks internet: https://tex.stackexchange.com/questions/247541/help-with-grid-lines-in-a-pgfplot
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+
+\newcommand{\option}{{\Large$\Square$ }}
+\def\IfSoln#1{\IfFileExists{solutions/#1}{\input{solutions/#1}}{}}
+
+\title{ASEN 3728 Aircraft Dynamics\\Written Homework 6}
+
+\date{Due date listed on Gradescope.}
+
+\begin{document}
+
+\maketitle
+
+\input{questions/1}
+\vspace{0.1cm}
+\IfSoln{1}
+\clearpage
+
+\input{questions/2}
+\vspace{0.1cm}
+\IfSoln{2}
+\clearpage
+
+\vspace{6cm}
+
+\input{questions/3}
+\vspace{0.1cm}
+\IfSoln{3}
+
+\clearpage
+
+\input{questions/4}
+\vspace{0.1cm}
+\IfSoln{4}
+
+\end{document}
