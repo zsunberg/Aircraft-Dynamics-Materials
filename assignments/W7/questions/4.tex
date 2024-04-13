@@ -1,0 +1,47 @@
+\begin{question}
+    In the Dutch Roll approximation, and under the assumption that off-diagonal elements in an aircraft's inertia matrix are negligible, the state space $\mathbf{A}_{lat}$ and $\mathbf{B}_{lat}$ matrices and state $\mathbf{x}_{lat}$ become:
+    \begin{align*}
+        \mathbf{x}_{dr} =
+        \begin{bmatrix}
+            \Delta v \\
+            \Delta r
+        \end{bmatrix}
+        \quad
+        \mathbf{A}_{dr} = 
+        \begin{bmatrix}
+            Y_v/m & -u_0 \\
+            N_v/I_z & N_r/I_z
+        \end{bmatrix}
+        \quad
+        \mathbf{B}_{dr} =
+        \begin{bmatrix}
+            0 & Y_{\delta_r}/m \\
+            N_{\delta_a}/I_z & N_{\delta_r}/I_z
+        \end{bmatrix}
+    \end{align*}
+    Consider implementing a yaw damper control law to improve the damping ratio of the Dutch Roll mode. This control law applies to the rudder only, and is $\Delta \delta_r = -k \Delta r$, $\Delta \delta_a = 0$.
+    \begin{enumerate}
+        \item Write an expression to calculate $\mathbf{u} = [\Delta \delta_a, \Delta \delta_r]^T$ in the form $\mathbf{u} = -\mathbf{K} \mathbf{x}_{dr}$, where $\mathbf{K}$ is a matrix of control gains. Then, find the closed-loop dynamics matrix $\mathbf{A}_{dr,cl}$ using $\mathbf{A}_{dr,cl} = \mathbf{A}_{dr} - \mathbf{B}_{dr} \mathbf{K}$
+        \item Write out the characteristic equation for the eigenvalues $\lambda$ of $\mathbf{A}_{dr,cl}$, and then solve for $k$ in terms of $\lambda$ and variables in $\mathbf{A}_{dr}$ and $\mathbf{B}_{dr}$.
+        \item A large jet transport has the following $\mathbf{A}_{dr}$ and $\mathbf{B}_{dr}$ matrices:
+        \begin{align*}
+            \mathbf{A}_{dr} = 
+            \begin{bmatrix}
+                -0.056 & -730 \\
+                0.0012 & -0.15
+            \end{bmatrix}
+            \quad
+            \mathbf{B}_{dr} =
+            \begin{bmatrix}
+                0 & 5.5 \\
+                0.004 & -0.47
+            \end{bmatrix}
+        \end{align*}
+        What is the damping ratio $\zeta$ of the Dutch Roll mode without the yaw damper in place?
+
+    \item Find the transfer function, $G_{\Delta v \delta_r}(s)$, relating the rudder deflection to sideslip velocity using the numerical values above.
+
+        \item We wish to increase the damping ratio of the Dutch Roll mode using the yaw damper control law. If $\zeta = 0.7$ and $\omega_n = 0.9656$ rad/s, what value of $k$ is required in the control law? (Note: A calculation using your result from Part 2 will likely give you a value of $k$ that has a small imaginary part. Ignore the imaginary part in your answer, as it is an artifact of the way this problem was set up.)
+        \item The jet is capable of $\Delta \delta_r = \pm 25^\circ$. Using the value of $k$ found in the previous part, what is the largest $\Delta r$ that the yaw damper can handle and still achieve $\zeta = 0.7$ for the Dutch Roll mode? 
+    \end{enumerate}
+\end{question}
