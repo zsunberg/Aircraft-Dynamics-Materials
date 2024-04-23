@@ -66,6 +66,11 @@ You do not need to modify the elevator and thrust controllers that have already 
     Run the \texttt{evaluate} function to produce a \texttt{submission.json} file that certifies the aircraft arrives at the target with your implementation of \texttt{controls}.
 \end{task}
 
+\begin{task}
+    \textbf{Optional:}
+    You can add wind to the simulation with a third integer argument to the \texttt{evaluate} function. This will add a constant wind in the $y$ direction with a magnitude equal to the argument in meters per second along with gusts based on an approximation to the Dryden gust model. Your leaderboard score will be increased by the velocity of the added wind. This task is completely optional and will not affect your grade.
+\end{task}
+
 \subsection*{Deliverables}
 In order to use the template files, rename them by removing \texttt{TEMPLATE\_}. To produce the required report with plots, using the Matlab command \texttt{publish('report.m', 'pdf')} is highly recommended. Submit the following files to Gradescope:
 

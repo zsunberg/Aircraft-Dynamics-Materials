@@ -3,7 +3,8 @@ function u = controls(t, x)
 %
 % INPUTS
 %   t = time in seconds
-%   x = [x, y, z, phi, theta, psi, u, v, w, p, q, r] in SI units and radians
+%   x = [x, y, z, phi, theta, psi, u^E, v^E, w^E, p, q, r] in SI units and radians
+%   NOTE: For this assignment, when there is wind, the velocity components are with respect to the EARTH, not the wind
 %
 % OUTPUTS
 %   u = [delta_e, delta_a, delta_r, delta_t] radians and number beteween 0 and 1

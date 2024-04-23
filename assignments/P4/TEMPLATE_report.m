@@ -58,3 +58,10 @@ grid on;
 %% Task 7
 
 evaluate(@controls, 'REPLACE_WITH_YOUR_GRADESCOPE_EMAIL@colorado.edu') % edit this with your actual email address
+
+%% Task 8 (OPTIONAL)
+
+% add wind to the simulation like this to increase your score on the leaderboard:
+wind = 1
+[json, T, X] = evaluate(@controls, 'REPLACE_WITH_YOUR_GRADESCOPE_EMAIL@colorado.edu', wind, 'wind_submission.json')
+% you can plot T and X to see the trajectory with wind
