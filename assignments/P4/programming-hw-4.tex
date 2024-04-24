@@ -35,7 +35,7 @@ The aircraft parameters are given in the Matlab struct returned by the \texttt{t
 You will use the aircraft \texttt{aircraftDynamics} and \texttt{lonAeroForcesAndMoments} functions developed in P3 for this assignment. If you did not complete P3, you can use the solution code posted on piazza. Template files for P4 are available by cloning the git repository at \url{https://github.com/zsunberg/Aircraft-Dynamics-Materials} and navigating to the \texttt{assignments/P4} directory. A zip file is also available at \url{https://github.com/zsunberg/Aircraft-Dynamics-Materials/raw/main/zips/assignments/P4.zip}. It is possible that there will be bugfixes to the assignment after it is released. These will be announced on Piazza.
 
 \begin{task}
-    Under the assumption that the 90 degree turn is a coordinated turn, calculate the roll angle required to complete the turn if the airspeed is 21 m/s and the turn radius is 200 m. Also, calculate the time needed to finish the turn if the turn is a perfect quarter-circle. This time, $t_{max}$, is needed in Task 3. \textbf{Make sure the calculated values are printed in your \texttt{report} pdf file.}
+    Under the assumption that the 90 degree turn is a coordinated turn, calculate the roll angle required to complete the turn if the airspeed is 21 m/s and the turn radius is 200 m. Also, calculate the time needed to finish the turn if the turn is a perfect quarter-circle. This time, $t_{max}$, is needed in Task \ref{task:plot}. \textbf{Make sure the calculated values are printed in your \texttt{report} pdf file.}
 \end{task}
 
 \begin{task} \label{task:rollrate}
@@ -57,8 +57,8 @@ You will use the aircraft \texttt{aircraftDynamics} and \texttt{lonAeroForcesAnd
 You do not need to modify the elevator and thrust controllers that have already been implemented in the \texttt{controls} function.
 \end{task}
 
-\begin{task}
-    Use the existing code under Task 3 of \texttt{report.m} to simulate the aircraft's motion with the nonlinear dynamics. The goal for the simulated turn is to arrive inside a box (sketched in blue in the diagram above) defined by $(x^E,y^E,z^E) = (200 \pm 5\ \text{m},200 \pm 5\ \text{m}, -1800 \pm 5 \text{m})$ after time $t_{max}$, which you calculated in Task 1. Tweak the values of the gains or the bank angle to achieve the goal.
+\begin{task} \label{task:plot}
+    Use the existing code under Task \ref{task:plot} of \texttt{report.m} to simulate the aircraft's motion with the nonlinear dynamics. The goal for the simulated turn is to arrive inside a box (sketched in blue in the diagram above) defined by $(x^E,y^E,z^E) = (200 \pm 5\ \text{m},200 \pm 5\ \text{m}, -1800 \pm 5 \text{m})$ after time $t_{max}$, which you calculated in Task 1. Tweak the values of the gains or the bank angle to achieve the goal.
     \textbf{In your report, include the plot produced by \texttt{plotStateHistory} plus a plot showing the path of the aircraft in the $x^E$-$y^E$ plane.}
 \end{task}
 
@@ -68,7 +68,7 @@ You do not need to modify the elevator and thrust controllers that have already 
 
 \begin{task}
     \textbf{Optional:}
-    You can add wind to the simulation with a third integer argument to the \texttt{evaluate} function. This will add a constant wind in the $y$ direction with a magnitude equal to the argument in meters per second along with gusts based on an approximation to the Dryden gust model. More information about the wind can be found in the \texttt{wind\_info.md} document in the P4 directory. Your leaderboard score will be increased by the velocity of the added wind. This task is completely optional and will not affect your grade.
+    You can add wind to the simulation with a third integer argument to the \texttt{evaluate} function. This will add a constant wind in the $y$ direction with a magnitude equal to the argument in meters per second along with gusts based on an approximation to the Dryden gust model. More information about the wind can be found in the \texttt{wind\_info.md} document in the P4 directory. Your leaderboard score will be increased by the velocity of the added wind. Note that the angle controls are limited to the interval $[-\pi/4, \pi/4]$ and the throttle is limited to $[0, 1]$. This task is completely optional and will not affect your grade.
 \end{task}
 
 \subsection*{Deliverables}

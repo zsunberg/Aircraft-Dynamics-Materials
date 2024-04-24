@@ -21,17 +21,17 @@ aileron_sys = ss(Alat, Blat(:,1), eye(4), []);
 p_fb_sys = feedback(ka*aileron_sys, 1, 1, 2);
 phi_sys = p_fb_sys(4,1); % input roll rate; output roll angle
 
-figure(1);
+figure(1); clf;
 rlocus(phi_sys);
 
-figure(2);
+figure(2); clf;
 kp = nan
 step(phi_sys); % Modify this to get the step response of the feedback system
 
 %% Task 4
 
 r_sys = ss(Alat, Blat(:,2), [0 0 1 0], []);
-figure(3);
+figure(3); clf;
 rlocus(r_sys);
 kr = nan
 
@@ -42,17 +42,18 @@ kr = nan
 
 [T, X] = ode45(@(t, x) aircraftDynamics(x, controls(t, x), ttwistor), [0, t_max], x_trim);
 
-figure(4);
+figure(4); clf;
 plotStateHistory(T, X);
 
 % Plot the trajectory in the x-y plane
 x = zeros(size(X,1));
 y = zeros(size(X,1)); 
-figure(5);
+figure(5); clf;
 plot(x, y);
+set(gca, 'YDir','reverse')
 title('Overhead view of a/c trajectory');
 xlabel('x_E (m)');
-ylabel('-y_E (m)');
+ylabel('y_E (m)');
 grid on;
 
 %% Task 7
