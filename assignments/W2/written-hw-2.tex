@@ -1,0 +1,84 @@
+\documentclass{article}
+
+\usepackage{fullpage,amsmath,amsthm,graphicx,enumitem}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{ifthen}
+\usepackage[symbol]{footmisc}
+\newboolean{solutions}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+
+\newcommand{\option}{{\Large$\Square$ }}
+
+\title{ASEN 3728 Aircraft Dynamics\\Written Homework 2}
+
+\date{Due date listed on Gradescope.}
+
+\begin{document}
+
+%%%% UPDATE TO RENDER SOLUTIONS %%%%
+\setboolean{solutions}{true} 
+
+\maketitle
+
+\begin{question}
+    A 10 kg quadrotor has state vector $\mathbf{x}$ = [0 m, 0 m, 0 m, 0 rad, $-\pi$/6 rad, 0 rad, 11 m/s, 4 m/s, 1 m/s, -0.1 rad/s, 0.2 rad/s, 0.4 rad/s]. There is wind with velocity $\mathbf{W}_B^E = [2,2,0]^T$ m/s. Each rotor applies a control force of magnitude 30 N to the aircraft, and $\nu$ = $10^{-2}$ kg/m. Considering forces due to gravity, aerodynamic drag, and the rotor control, what is $\dot{\mathbf{V}}_B^E$?
+\end{question}
+\vspace{0.1cm}
+
+
+\clearpage
+
+\begin{question}
+
+Consider a 25 kg aircraft operating with the state:
+\begin{equation}
+\nonumber
+{\bf x} = 
+\begin{array}{lll}
+[-1200 \textrm{ m} & 3075 \textrm{ m} & -1550 \textrm{ m } ... \\
+0 \textrm{ rad} & \pi/3 \textrm{ rad} & \pi/2 \textrm{ rad } ... \\
+10 \textrm{ m/s} & -2 \textrm{ m/s} & 3 \textrm{ m/s } ... \\
+0.02 \textrm{ rad/sec} & -0.04 \textrm{ rad/sec} & 0.05 \textrm{ rad/sec}]^T
+\end{array}
+\end{equation}
+
+\begin{enumerate}[label=(\Alph*)]
+
+\item What is the time rate of change of the inertial z-position of this aircraft?
+\item What is the magnitude of the angular velocity vector?
+\item Given the air-relative velocity vector in body-coordinates $\mathbf{V}_B = (10, -1, -2) \textrm{ m/s}$, what is the inertial wind vector expressed in inertial coordinates?
+
+\item Given the aircraft has an angular acceleration around it's x-axis of $\dot{p}^E = 0.50 \textrm{rad/s}^2$, $I_{xz} = 0$ $kg*m^2$, $I_x = 10$ $kg* m^2$, and $I_y = I_z$, what is the aerodynamic moment acting along the x-axis of the aircraft expressed in body coordinates? 
+
+\end{enumerate}
+
+\end{question}
+
+\clearpage 
+
+\begin{question}
+    The test rig in the diagram below is used to measure the thrust of a rotor, $T$. The rotor, which has mass $m$, is mounted at the end of a massless rod of length $l$, which has a torsional spring with stiffness $k$ at its base and an drag moment coefficient $\mu$.
+\begin{center}
+\includegraphics[width=2in]{rotor-test-diagram.pdf}
+\end{center}
+The equation of motion is
+\begin{equation}
+    \ddot{\theta} = \frac{-mgl\cos(\theta) - k\theta + Tl - \mu |\dot{\theta}|\dot{\theta}}{ml^2} \text{.}
+\end{equation}
+
+\begin{enumerate}[label=(\Alph*)]
+    \item Suppose that the rig comes to rest at an equilibrium point where the angle is $\theta_0$. Find an expression for the thrust $T_0$ in terms of $\theta_0$ and the other parameters.
+    \item In order to measure the thrust with this rig, which of the parameters $m$, $l$, $\mu$, and $k$ must be known?
+    \item Linearize the equation of motion about the equilibrium point where the angle is $\theta_0$.
+    \item Write the state space equations for the linearized system with control input $\Delta T$ and output $\Delta \theta$.
+\end{enumerate}
+\end{question}
+
+
+\vspace{0.1cm}
+
+\end{document}
