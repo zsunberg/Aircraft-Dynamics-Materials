@@ -70,9 +70,6 @@ displayTrajectory(t, x)
 % figure(5)
 % animateQuadrotor(t, x)
 
-%figure(7)
-%animateQuadrotor(t, x)
-
 %% Task 6
 wind = 0; 
 evaluate(@quadrotorLinearControls, 'your.gradescope.email@colorado.edu', wind)
@@ -82,6 +79,4 @@ evaluate(@quadrotorLinearControls, 'your.gradescope.email@colorado.edu', wind)
 % wind = 1;
 % [t, x] = simulateQuadrotor(@quadrotorLinearControls,wind);
 % displayTrajectory(t, x)
-% wind = 1; 
 % evaluate(@quadrotorControls, 'your.gradescope.email@colorado.edu', wind)
-
