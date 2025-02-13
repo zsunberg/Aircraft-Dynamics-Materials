@@ -1,18 +1,6 @@
 I = 3e-4;
 m = 2;
 
-% Effective z-controller gains are selected for you. 
-% You may modify these values but are not required to do so.
-
-z = 0.7;
-T = 2*2;
-wn = 2*pi/T;
-
-lambda = -z*wn + wn*sqrt(1-z^2)*1i;
-
-k5 = 2*z*wn*m
-k6 = -m*(-(imag(lambda)^2) - k5^2/(4*m^2))
-
 %% Task 1
 
 k1 = 0
