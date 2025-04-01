@@ -86,29 +86,4 @@
 
 \clearpage
 
-\begin{question}
-    While flying near sea-level at $u_0 = 10$ m/s, the TTwistor aircraft from homework P3 has the lateral dynamics matrix shown below.
-    \begin{align*}
-        \mathbf{A}_{lat} = 
-        \begin{bmatrix}
-         -0.2472 & -0.0671 & -9.7797 & 9.8100 \\
-         -0.7966 & -16.5375 & 1.8114 & 0 \\
-         0.4607 & -0.3451 & -0.4586 &  0 \\
-         0 & 1.0000 & 0 & 0
-        \end{bmatrix}
-    \end{align*}
-    Assume for this analysis that the aircraft's inertia matrix is diagonal, so that only $I_x$, $I_y$, and $I_z$ are non-zero. This means that $\Gamma_3 = 1/I_x$, $\Gamma_4 = 0$, and $\Gamma_8 = 1/I_z$.
-    
-    \begin{enumerate}
-        \item Calculate the time constant ($\tau_{roll} = 1/|\lambda|$) of the roll mode and the natural frequency $\omega_{n,dr}$ of the Dutch roll mode.
-        \item Recall that nine lateral dimensional stability derivatives appear in the expression for $\mathbf{A}_{lat}$. One-by-one, increase the value of each dimensional stability derivative by 10\% and calculate the new time constant of the roll mode and new natural frequency of the dutch roll mode. So, first, increase $Y_v$ by 10\% and calculate the new values of $\tau_{roll}$ and $\omega_{n,dr}$. Then, return $Y_v$ to its original value and increase the next stability derivative by 10\%. You do not need to report every value that you calculate, but do answer the following:
-        \begin{enumerate}
-            \item A change in which stability derivative decreases the time constant of the roll mode the most? What is the new time constant when this derivative is increased by 10\%?
-            \item A change in which stability derivative increases the natural frequency of the Dutch roll mode the most? What is the new natural frequency when this derivative is increased by 10\%?
-        \end{enumerate}
-        \item Qualitatively explain why the two stability derivatives you identified in the previous part have the largest effect on $\tau_{roll}$ and $\omega_{n,dr}$ using characteristics of the roll and Dutch roll modes.
-    \end{enumerate}
-\end{question}
-\vspace{0.1cm}
-
 \end{document}
